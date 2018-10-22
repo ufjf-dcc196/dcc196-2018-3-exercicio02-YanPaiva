@@ -27,7 +27,7 @@ public final class SeriadoContract {
                 " FOREIGN KEY ("+EpisodeoBD.COLUMN_NAME_ID_SERIADO+" REFERENCES ("
                 +SeriadoBD._ID+")"
                 +")";
-        public final static String DROP_SERIADO = "DROP TABLE IF EXISTS "+SeriadoBD.TABLE_NAME;
+        public final static String DROP_TEMPORADA = "DROP TABLE IF EXISTS "+SeriadoBD.TABLE_NAME;
 
     }
     public final class EpisodeoBD implements BaseColumns{
@@ -36,7 +36,7 @@ public final class SeriadoContract {
         public final static String COLUMN_NAME_NUMERO = "numero";
         public final static String COLUMN_NAME_ID_SERIADO = "id_temporada";
 
-        public final static String CREATE_TEMPORADA  = "CREATE TABLE "+EpisodeoBD.TABLE_NAME+" ("
+        public final static String CREATE_EPISODEO  = "CREATE TABLE "+EpisodeoBD.TABLE_NAME+" ("
                 + EpisodeoBD._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + EpisodeoBD.COLUMN_NAME_TITULO+ " TEXT, "
                 + EpisodeoBD.COLUMN_NAME_NUMERO+ " INTEGER, "
@@ -44,7 +44,7 @@ public final class SeriadoContract {
                 " FOREIGN KEY ("+EpisodeoBD.COLUMN_NAME_ID_SERIADO+" REFERENCES ("+
                 TemporadaBD._ID+")"
                 +")";
-        public final static String DROP_SERIADO = "DROP TABLE IF EXISTS "+SeriadoBD.TABLE_NAME;
+        public final static String DROP_EPISODEO = "DROP TABLE IF EXISTS "+SeriadoBD.TABLE_NAME;
 
 
     }
