@@ -3,8 +3,18 @@ package Model;
 public class Episodeo {
     private int numero;
     private String titulo;
+    private int id;
 
     public Episodeo() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Episodeo setId(int id) {
+        this.id = id;
+        return this;
     }
 
     public int getNumero() {

@@ -6,8 +6,18 @@ public class Temporada {
     private int numero;
     private String titulo;
     private ArrayList<Episodeo> episodeos;
+    private int id;
 
     public Temporada() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Temporada setId(int id) {
+        this.id = id;
+        return this;
     }
 
     public ArrayList<Episodeo> getEpisodeos() {

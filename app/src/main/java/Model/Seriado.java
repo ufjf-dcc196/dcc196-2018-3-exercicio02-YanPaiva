@@ -5,8 +5,18 @@ import java.util.ArrayList;
 public class Seriado {
     private ArrayList<Temporada> season;
     private String nome;
+    private int id;
 
     public Seriado() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Seriado setId(int id) {
+        this.id = id;
+        return this;
     }
 
     public String getNome() {
