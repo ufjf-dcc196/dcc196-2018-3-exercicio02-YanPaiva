@@ -23,10 +23,11 @@ public final class SeriadoContract {
                 + TemporadaBD._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + TemporadaBD.COLUMN_NAME_TITULO+ " TEXT, "
                 + TemporadaBD.COLUMN_NAME_NUMERO+ " INTEGER, "
-                + TemporadaBD.COLUMN_NAME_ID_SERIADO + " INTEGER,"+
-                " FOREIGN KEY ("+EpisodeoBD.COLUMN_NAME_ID_SERIADO+" REFERENCES ("
-                +SeriadoBD._ID+")"
-                +")";
+                + TemporadaBD.COLUMN_NAME_ID_SERIADO + " INTEGER"+
+                ")";
+                //" FOREIGN KEY "+TemporadaBD.COLUMN_NAME_ID_SERIADO+" REFERENCES "
+                //+"Seriado(_ID);
+
         public final static String DROP_TEMPORADA = "DROP TABLE IF EXISTS "+SeriadoBD.TABLE_NAME;
 
     }
@@ -34,16 +35,17 @@ public final class SeriadoContract {
         public final static String TABLE_NAME = "Episodeo";
         public final static String COLUMN_NAME_TITULO = "titulo";
         public final static String COLUMN_NAME_NUMERO = "numero";
-        public final static String COLUMN_NAME_ID_SERIADO = "id_temporada";
+        public final static String COLUMN_NAME_ID_TEMPORADA = "id_temporada";
 
         public final static String CREATE_EPISODEO  = "CREATE TABLE "+EpisodeoBD.TABLE_NAME+" ("
                 + EpisodeoBD._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + EpisodeoBD.COLUMN_NAME_TITULO+ " TEXT, "
                 + EpisodeoBD.COLUMN_NAME_NUMERO+ " INTEGER, "
-                + EpisodeoBD.COLUMN_NAME_ID_SERIADO + " INTEGER," +
-                " FOREIGN KEY ("+EpisodeoBD.COLUMN_NAME_ID_SERIADO+" REFERENCES ("+
-                TemporadaBD._ID+")"
-                +")";
+                + EpisodeoBD.COLUMN_NAME_ID_TEMPORADA + " INTEGER" +
+                ")";
+        //    " FOREIGN KEY ("+EpisodeoBD.COLUMN_NAME_ID_TEMPORADA+" REFERENCES ("+
+               // TemporadaBD._ID+")"
+
         public final static String DROP_EPISODEO = "DROP TABLE IF EXISTS "+SeriadoBD.TABLE_NAME;
 
 

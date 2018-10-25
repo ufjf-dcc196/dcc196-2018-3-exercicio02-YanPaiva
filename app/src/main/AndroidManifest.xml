@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SerieActivity" />
-        <activity android:name=".ConteudoActivity"></activity>
+        <activity android:name=".ConteudoActivity" />
+        <activity android:name=".NewSeriadoActivity"></activity>
     </application>
 
 </manifest>
